@@ -4,13 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
 
-  <link rel="shortcut icon" type="image/x-icon" href="https://web.archive.org/web/20170117040131im_/https://africahacktrip.org/wp-content/themes/africahacktrip/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.ico" | relavtive_url }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://web.archive.org/web/20170117040131cs_/https://africahacktrip.org/wp-content/themes/africahacktrip/leaflet.css"/>
-  <script src="https://web.archive.org/web/20170117040131js_/https://africahacktrip.org/wp-content/themes/africahacktrip/js/bootstrap.min.js"></script>
-  <script src="https://web.archive.org/web/20170117040131js_/https://africahacktrip.org/wp-content/themes/africahacktrip/js/leaflet-src.js"></script>
-  <script src="https://web.archive.org/web/20170117040131js_/https://africahacktrip.org/wp-content/themes/africahacktrip/js/leaflet.label.js"></script>
-  <script src="https://web.archive.org/web/20170117040131js_/https://africahacktrip.org/wp-content/themes/africahacktrip/js/map.js"></script>
+  <link rel="stylesheet" href="{{ "/assets/leaflet.css" | relative_url }}"/>
+  <script src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/leaflet-src.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/leaflet.label.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/map.js" | relative_url }}"></script>
   <script type="text/javascript">
     $(function() {
       window.SMALL_SCREEN = $(document).innerWidth() < 785;
@@ -24,15 +24,18 @@
       }
     });
   </script>
-  <link rel="stylesheet" id="responsive-video-light-css" href="https://web.archive.org/web/20170117040131cs_/https://africahacktrip.org/wp-content/plugins/responsive-video-light/css/responsive-videos.css?ver=20130111" type="text/css" media="all"/>
+  <link rel="stylesheet" id="responsive-video-light-css" href="{{ "/assets/wp-content/plugins/responsive-video-light/css/responsive-videos.css" | relative_url }}" type="text/css" media="all"/>
   <link rel="stylesheet" id="twentythirteen-fonts-css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all"/>
-  <link rel="stylesheet" id="genericons-css" href="https://web.archive.org/web/20170117040131cs_/https://africahacktrip.org/wp-content/themes/twentythirteen/fonts/genericons.css?ver=2.09" type="text/css" media="all"/>
-  <link rel="stylesheet" id="twentythirteen-style-css" href="https://web.archive.org/web/20170117040131cs_/https://africahacktrip.org/wp-content/themes/africahacktrip/style.css?ver=2013-07-18" type="text/css" media="all"/>
-  <script type="text/javascript" src="https://web.archive.org/web/20170117040131js_/https://africahacktrip.org/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script>
-  <script type="text/javascript" src="https://web.archive.org/web/20170117040131js_/https://africahacktrip.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script>
+  <link rel="stylesheet" id="genericons-css" href="{{ "/assets/wp-content/themes/twentythirteen/fonts/genericons.css" | relative_url }}" type="text/css" media="all"/>
+  <link rel="stylesheet" id="genericons-css" href="{{ "/assets/wp-content/themes/twentythirteen/style.css" | relative_url }}" type="text/css" media="all"/>
+  <link rel="stylesheet" href="{{ "/assets/bootstrap.min.css" | relative_url }}" type="text/css" media="all"/>
+  <link rel="stylesheet" href="{{ "/assets/aside.css" | relative_url }}" type="text/css" media="all"/>
+  <link rel="stylesheet" href="{{ "/assets/about_us.css" | relative_url }}" type="text/css" media="all"/>
+  <link rel="stylesheet" id="twentythirteen-style-css" href="{{ "/assets/style.css" | relative_url }}" type="text/css" media="all"/>
+  <script type="text/javascript" src="{{ "/assets/js/jquery-migrate.min.js" | relative_url }}"></script>
 	<style type="text/css" id="twentythirteen-header-css">
     .site-header {
-      background: url(https://web.archive.org/web/20170117040131im_/https://blog.africahacktrip.org/wp-content/uploads/2013/08/cropped-DSC_1038.jpg) no-repeat scroll top;
+      background: url({{ "/assets/images/cropped-DSC_1038.jpg" | relative_url }}) no-repeat scroll top;
       background-size: 1600px auto;
     }
   </style>

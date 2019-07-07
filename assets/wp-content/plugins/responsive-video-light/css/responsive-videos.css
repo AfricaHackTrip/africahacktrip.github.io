@@ -1,0 +1,47 @@
+video, embed, iframe, object  { max-width: 100%; }
+
+.video-wrapper {
+	width: 1280px;
+	max-width: 100%;
+	margin-bottom: 2em;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*
+     FILE ARCHIVED ON 00:09:31 Dec 28, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:13:56 Jul 07, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 25.563 (3)
+  esindex: 0.007
+  captures_list: 42.116
+  CDXLines.iter: 11.183 (3)
+  PetaboxLoader3.datanode: 60.333 (5)
+  exclusion.robots: 0.2
+  exclusion.robots.policy: 0.19
+  RedisCDXSource: 2.691
+  PetaboxLoader3.resolve: 60.491 (2)
+  load_resource: 159.197
+*/
