@@ -9,7 +9,7 @@ layout: default
 
     <div class="entry-meta">
       <span class="date">
-        <a href="https://web.archive.org/web/20170117040131/https://africahacktrip.org/2014/06/18/the-movie-is-coming-thanks-for-your-support/" title="Permalink to The Movie is coming – thanks for your support" rel="bookmark">
+        <a href="{{ page.url }}" title="{{ page.title }}" rel="bookmark">
           <time class="entry-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             {{ page.date | date: date_format }}

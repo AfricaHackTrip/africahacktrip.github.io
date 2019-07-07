@@ -1,0 +1,33 @@
+---
+layout: default
+title: Blog
+---
+
+<section id="posts">
+  {% for post in site.posts %}  			    			    				
+    <article id="post-762" class="post-762 post type-post status-publish format-standard hentry category-uncategorized">
+      <header class="entry-header">
+        <h1 class="entry-title">
+          <a href="{{ post.url }}" rel="bookmark">{{ post.title | escape }}</a>
+        </h1>
+        
+        <div class="entry-meta">
+          <span class="date">
+            <a href="{{ post.permalink }}" title="Permalink to {{ post.title }}" rel="bookmark">
+              <time class="entry-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ post.date | date: date_format }}
+              </time>
+            </a>
+          </span>
+          <span class="categories-links"><a href="https://web.archive.org/web/20161021083154/https://africahacktrip.org/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></span>
+          <span class="author vcard"><a class="url fn n" href="https://web.archive.org/web/20161021083154/https://africahacktrip.org/author/bumi/" title="View all posts by bumi" rel="author">bumi</a></span>
+        </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+    
+      <div class="entry-content">
+        {{ post.content }}
+      </div>
+    </article><!-- #post -->
+  {% endfor %}
+</section>
