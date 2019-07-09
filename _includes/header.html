@@ -14,9 +14,9 @@
         <li id="menu-item-111" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-111"><a href="/category/locations/uganda/">Uganda</a></li>
         <li id="menu-item-109" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-109"><a href="/category/locations/rwanda/">Rwanda</a></li>
         <li id="menu-item-110" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-110"><a href="/category/locations/tanzania/">Tanzania</a></li>
-        <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="/about-us/">About us</a></li>
-        <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="/supporters/">Supporters</a></li>
-        <li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-153"><a href="/blog/">Blog</a></li>
+        <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222{% if page.url contains "/about-us/" %} current-menu-item page_item page-item-52 current_page_item{% endif %}"><a href="{{ "/about-us/" | relative_url }}">About us</a></li>
+        <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244{% if page.url contains "/supporters/" %} current-menu-item page_item page-item-229 current_page_item{% endif %}"><a href="{{ "/supporters/" | relative_url }}">Supporters</a></li>
+        <li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153{% if page.url contains "/blog/" %} current-menu-item page_item page-item-151 current_page_item current_page_parent{% endif %}"><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
       </ul>
     </nav>
   </div>
