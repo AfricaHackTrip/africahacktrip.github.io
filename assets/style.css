@@ -1,7 +1,7 @@
 @media (max-width: 765px) {
 
   ul.nav { width: 100% }
-  ul.nav li { 
+  ul.nav li {
     width: 100%;
     text-align: center;
   }
@@ -12,19 +12,19 @@
 }
 @media (min-width: 766px) {
   .navbar-nav > li > a {
-     padding: 25px 10px; 
+     padding: 25px 10px;
    }
   #intro {
     position: absolute;
     top: 140px;
     width: 45%;
-    padding: 20px 0px 0px 0px; 
+    padding: 20px 0px 0px 0px;
   }
 }
 .navbar-collapse {
   max-height:none;
 }
-  
+
 /*
     Infinite Scroll
 */
@@ -75,7 +75,7 @@
   margin-top: 20px;
   color: #323232;
 }
-.entry-title a, .entry-title a:link, .entry-title a:visited { 
+.entry-title a, .entry-title a:link, .entry-title a:visited {
   color: #323232;
 }
 .entry-content {
@@ -152,10 +152,10 @@ a:hover {
 }
 
 
-.navbar-inverse .navbar-nav .current-menu-item a, 
-.navbar-inverse .navbar-nav li.current-menu-item a:hover, 
-.navbar-inverse .navbar-nav .active a, 
-.navbar-inverse .navbar-nav li.active a:hover, 
+.navbar-inverse .navbar-nav .current-menu-item a,
+.navbar-inverse .navbar-nav li.current-menu-item a:hover,
+.navbar-inverse .navbar-nav .active a,
+.navbar-inverse .navbar-nav li.active a:hover,
 .navbar-inverse .navbar-nav li a:hover {
   background-color: #fbf8ef;
   color: #323232;
@@ -621,3 +621,10 @@ ul.people li:before {
 .logo-list-item-extra {
   display: none;
   padding: 40px 0 0 100px; }
+
+
+article.about-us {
+  font-size: 22px;
+  line-height: 36px;
+  margin-bottom: 22px;
+}
