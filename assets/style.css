@@ -231,7 +231,7 @@ footer#page-footer {
   margin-top: 2em; }
 
 #bigfatmap {
-  margin-bottom: 50px; }
+  margin-bottom: -40px; }
 
 .leaflet-container {
   width: 100%;
@@ -336,6 +336,9 @@ h1#tagline {
   line-height: 1.5;
   font-weight: bold;
   color: #000; }
+
+#intro {
+  background: #fbf8ef; }
 
 #intro p {
   font-size: 18px;
