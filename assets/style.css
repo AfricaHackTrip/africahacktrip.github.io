@@ -84,11 +84,8 @@
   line-height: 1.4;
 }
 
-.home-title {
-  color: #000;
-  font-size: 22px;
-  margin-bottom: 30px;
-}
+.home-heading {
+  font-size: 22px; }
 
 /* old theme...................................................... */
 
@@ -231,7 +228,7 @@ footer#page-footer {
   margin-top: 2em; }
 
 #bigfatmap {
-  margin-bottom: -40px; }
+  margin-bottom: -30px; }
 
 .leaflet-container {
   width: 100%;
