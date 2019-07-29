@@ -97,12 +97,19 @@ layout: home
     }
   }
 </style>
-<script src="{{ "/assets/js/masonry.min.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/leaflet-src.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/leaflet.label.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/map.js" | relative_url }}"></script>
 <script type="text/javascript">
   $(function() {
-    msnry = new Masonry( $("#get-excited").get(0), {
-      itemSelector: '.tile'
-    });
+    Hackmap.initializeMap();
+    if(window.mapCity && window.mapCity != "") {
+      Hackmap.moveToCountry(window.mapCity);
+    }
+    if(window.mapMarkers && window.mapMarkers != "") {
+      Hackmap.addMarkers(window.mapMarkers);
+    }
+
     if(!window.SMALL_SCREEN) {
       Hackmap.moveToOverview();
     }

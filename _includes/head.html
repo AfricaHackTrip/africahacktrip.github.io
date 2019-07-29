@@ -8,20 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <link rel="stylesheet" href="{{ "/assets/leaflet.css" | relative_url }}"/>
   <script src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/leaflet-src.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/leaflet.label.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/map.js" | relative_url }}"></script>
   <script type="text/javascript">
     $(function() {
       window.SMALL_SCREEN = $(document).innerWidth() < 785;
-     
-      Hackmap.initializeMap();
-      if(window.mapCity && window.mapCity != "") {
-        Hackmap.moveToCountry(window.mapCity);
-      }
-      if(window.mapMarkers && window.mapMarkers != "") {
-        Hackmap.addMarkers(window.mapMarkers);
-      }
     });
   </script>
   <link rel="stylesheet" id="responsive-video-light-css" href="{{ "/assets/wp-content/plugins/responsive-video-light/css/responsive-videos.css" | relative_url }}" type="text/css" media="all"/>
