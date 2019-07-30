@@ -4,42 +4,42 @@
 
 layout: home
 ---
-<div id="intro" style="background: #fbf8ef;">
+<div id="intro">
   <p>
-    <strong>We are a group of developers and designers from Europe. When we heard about the emerging African tech hubs we decided to take a trip to connect and exchange with the local communities there.</strong>
+    <strong>We are a group of developers and designers from Europe. When we heard about the emerging African tech hubs we decided to take a trip to connect and exchange with local communities.</strong>
   </p>
   <p>
     We met incredible people, shared ideas and experiences and built things together. We learned about cool projects and unique challenges, visited amazing spaces, and - most importantly - made friends.
   </p>
 </div>
 
-<div class="row">
+<div class="row" style="margin-bottom: 2em">
   <div class="col-md-4">
-    <h2>Why</h2>
+    <h2 class="home-heading">Why</h2>
     <p>
       We had been <strong>working with people from all over the world</strong>, but <strong>not yet with hackers from Africa</strong>. We were curious and wanted to change that.
     </p>
     <p>
       We also wanted to share our experiences with our local communities and kick off a continuous exchange.
     </p>
-  </div>  
+  </div>
   <div class="col-md-4">
-    <h2>How</h2>
+    <h2 class="home-heading">How</h2>
     <p>
       We went as self-funded individuals in order to meet <strong>at eye-level</strong> and organized <strong>barcamps and hackathons</strong> to get in touch with as many people as possible.
     </p>
-  </div>  
+  </div>
   <div class="col-md-4">
-    <h2>When/Where</h2>
+    <h2 class="home-heading">When/Where</h2>
     <p>
       In 2013 we went to East Africa and spent a week each in <strong>Nairobi</strong> (Kenya), <strong>Kampala</strong> (Uganda), <strong>Kigali</strong> (Rwanda) and <strong>Dar es Salaam</strong> (Tanzania) and visited the main tech hubs there.
     </p>
-  </div>  
+  </div>
 </div>
 
-<section id="teaser" style="margin: 2em 0">
+<section class="teaser">
   <div class="teaser-content">
-    <h1 class="home-title">AfricaHackTrip - The Movie</h1>
+    <h2 class="home-heading">AfricaHackTrip - The Movie</h2>
     <div class="teaser-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/lVuEchnp7nk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -50,22 +50,66 @@ layout: home
       You will experience the fun we had and learn about the development of the tech hubs in Africa, unique aspects of markets and products and amazing community initiatives.
     </p>
     <p><strong>Please share! <3</strong></p>
+    <p><a href="{{ "/supporters" | relative_url }}">Thanks to our supporters!</a></p>
+    <p><a href="{{ "/videos" | relative_url }}">&rsaquo; More videos</a></p>
   </div>
 </section>
 
+<div class="row" style="margin-top: 4em; margin-bottom: 2em">
+  <div class="col-md-4">
+    <h2 class="home-heading">Social Media</h2>
+    <p>
+      <a href="https://facebook.com/Africahacktrip2013" target="_blank">&rsaquo; Facebook</a>
+    </p>
+    <a class="twitter-timeline" data-width="100%" data-height="400" data-theme="light" data-link-color="#f06361" href="https://twitter.com/AfricaHackTrip?ref_src=twsrc%5Etfw">Tweets by AfricaHackTrip</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+  </div>
+  <div class="col-md-4">
+    <h2 class="home-heading">Latest Blog Posts</h2>
+    <ul>
+    {% for post in site.posts %}
+      {% if forloop.index > 9 %}
+        {% break %}
+      {% endif %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title | escape }}</a>
+        –
+        <time class="entry-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ post.date | date: date_format }}
+        </time>
+      </li>
+    {% endfor %}
+    </ul>
+    <p><a href="{{ "/blog/" | relative_url }}">&rsaquo; All posts</a></p>
+  </div>
+  <div class="col-md-4">
+    <h2 class="home-heading">Photos</h2>
+    <p>There are loads of photos from AfricaHackTrip! Check out our <a href="https://www.flickr.com/groups/africahacktrip/pool/" target="_blank">Flickr</a> and <a href="https://africahacktrip.tumblr.com/" target="_blank">Tumblr</a>.</p>
+    <p><img src="{{ "/assets/images/team.jpg" | relative_url }}" alt="team" width="100%"></p>
+    <p><img src="{{ "/assets/images/group.jpg" | relative_url }}" alt="group" width="100%"></p>
+  </div>
+</div>
+
 <style type="text/css">
-  @media (min-width: 785px) {
+  @media (min-width: 766px) {
     .leaflet-container {
       height: 400px;
     }
   }
 </style>
-<script src="{{ "/assets/js/masonry.min.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/leaflet-src.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/leaflet.label.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/map.js" | relative_url }}"></script>
 <script type="text/javascript">
-  $(function() { 
-    msnry = new Masonry( $("#get-excited").get(0), {
-      itemSelector: '.tile'
-    });  
+  $(function() {
+    Hackmap.initializeMap();
+    if(window.mapCity && window.mapCity != "") {
+      Hackmap.moveToCountry(window.mapCity);
+    }
+    if(window.mapMarkers && window.mapMarkers != "") {
+      Hackmap.addMarkers(window.mapMarkers);
+    }
+
     if(!window.SMALL_SCREEN) {
       Hackmap.moveToOverview();
     }
